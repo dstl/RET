@@ -1,0 +1,12 @@
+[flake8]
+# W503	Line break occurred before a binary operator to be consistent with black
+ignore = W503
+exclude = docs, build, mesa, .git, __pycache__, build, dist
+select = B,C,D,E,F,N,W,DAR,TC,TC1
+
+# To match Black
+max-line-length = 100
+max-doc-length = 120
+max-complexity = 10
+
+docstring-convention = google

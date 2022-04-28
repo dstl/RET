@@ -1,0 +1,31 @@
+"""Dictionary of FNC Corporate Colours."""
+# core colours
+FNC_RED = "#B71234"
+FNC_GREY = "#747678"
+FNC_BLACK = "black"
+FNC_WHITE = "white"
+
+# complementary colours
+FNC_GREEN = "#7CA295"
+FNC_MUSTARD = "#AEA444"
+FNC_TURQUOISE = "#3CB6CE"
+FNC_PURPLE = "#786592"
+
+# extended complementary colours
+# darks
+FNC_DARK_GREEN = "#578575"
+FNC_DARK_MUSTARD = "#9B8F2E"
+FNC_DARK_TURQUOISE = "#009BBB"
+FNC_DARK_PURPLE = "#614D7D"
+
+# lights
+FNC_LIGHT_GREEN = "#9DBCB0"
+FNC_LIGHT_MUSTARD = "#C6BF70"
+FNC_LIGHT_TURQUOISE = "#85CDDB"
+FNC_LIGHT_PURPLE = "#A092B4"
+
+# very lights
+FNC_V_LIGHT_GREEN = "#B7CEC4"
+FNC_V_LIGHT_MUSTARD = "#D3CD8B"
+FNC_V_LIGHT_TURQUOISE = "#A1D8E0"
+FNC_V_LIGHT_PURPLE = "#C6BDD2"

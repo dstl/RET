@@ -1,0 +1,17 @@
+[run]
+branch = True
+concurrency = multiprocessing
+
+[report]
+omit =
+    mesa_ret/testsret/*
+    ret_tap/tests/*
+    mesa/*
+
+exclude_lines =
+    pragma: no cover
+    if TYPE_CHECKING:
+	RuntimeError
+	NotImplementedError
+	FileNotFoundError
+	ImportError
