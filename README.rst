@@ -19,12 +19,6 @@ This version is 1.0.0
   This repo works with the amended mesa repo, version 1.0.0
 | This is intended for use by experienced analysts with software and simulation development experience.
 | This version was written by Frazer-Nash Consultancy.
-.. image:: fnc.jpg
-   :width: 200px
-   :height: 100px
-   :scale: 100 %
-   :alt: Frazer-Nash Consultancy Logo
-   :target: https://www.fnc.co.uk/
 | https://www.fnc.co.uk/
 
 
