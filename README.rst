@@ -89,3 +89,7 @@ Operating platform
 
 This framework should be capable of being run on any platform that can support a python environment and has sufficient computing power.
 The only recommended and/or supported platform is Windows 10 at a level consistent with modern business laptops.
+
+Copyright
+---------
+Copyright 2022 Dstl and Frazer-Nash Consultancy.
