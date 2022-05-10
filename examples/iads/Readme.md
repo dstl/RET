@@ -77,4 +77,5 @@ python run_gym.py
 - [IADS/server.py](IADS/server.py): Sets up the visualization.
 - [IADS/portrayal.py](IADS/portrayal.py): Exposes the agent parameters for display by the visualization.
 - [images/Base_map.png](images/Background.png): The background image file.
+  - Image attribution: Google, copyright 2021
 - [run.py](run.py): Launches the visualization.
