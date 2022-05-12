@@ -88,7 +88,7 @@ class GroundTargetResolver(DefaultHostileTargetResolver):
         enemies = super().run(detector=detector, views=views)
         filter = Or([ArmourAgents(), InfantryAgents()])
         views = filter.run(enemies)
-        return [v.location for v in views]
+        return views
 
 
 class DirectFireBehaviour(FireBehaviour):
