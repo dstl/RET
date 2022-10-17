@@ -1,5 +1,8 @@
-"""Simulation of perceived world - The view that an agent has of the world."""
+"""
+Samuel Hughes mod - 17/10/22
 
+Simulation of perceived world - The view that an agent has of the world.
+"""
 from __future__ import annotations
 
 import warnings
