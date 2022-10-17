@@ -104,3 +104,6 @@ cov.xml
 /typings
 
 output/*
+.DS_Store
+mesa_ret/.DS_Store
+mesa_ret/mesa_ret/.DS_Store
