@@ -1,29 +1,32 @@
-"""Utilities to generate hostile agents for IADS scenario."""
+"""Utilities to generate hostile agents for IADS scenario.
+
+Unit icons created using: <https://spatialillusions.com/>
+"""
 from __future__ import annotations
 
 from datetime import timedelta
 from math import inf
 
-from mesa_ret.agents.agent import Affiliation, RetAgent
-from mesa_ret.agents.agenttype import AgentType
-from mesa_ret.agents.protectedassetagent import ProtectedAssetAgent
-from mesa_ret.agents.sensorfusionagent import SensorFusionAgent
-from mesa_ret.behaviours.communicate import (
+from ret.agents.agent import Affiliation, RetAgent
+from ret.agents.agenttype import AgentType
+from ret.agents.protectedassetagent import ProtectedAssetAgent
+from ret.agents.sensorfusionagent import SensorFusionAgent
+from ret.behaviours.communicate import (
     CommunicateOrdersBehaviour,
     CommunicateWorldviewBehaviour,
 )
-from mesa_ret.behaviours.fire import FireBehaviour
-from mesa_ret.behaviours.hide import HideBehaviour
-from mesa_ret.behaviours.move import GroundBasedMoveBehaviour
-from mesa_ret.behaviours.sense import SenseBehaviour
-from mesa_ret.behaviours.wait import WaitBehaviour
-from mesa_ret.creator.agents import create_agents
-from mesa_ret.sensing.sensor import (
+from ret.behaviours.fire import FireBehaviour
+from ret.behaviours.hide import HideBehaviour
+from ret.behaviours.move import GroundBasedMoveBehaviour
+from ret.behaviours.sense import SenseBehaviour
+from ret.behaviours.wait import WaitBehaviour
+from ret.creator.agents import create_agents
+from ret.sensing.sensor import (
     LineOfSightSensor,
     SensorDistanceThresholds,
     SensorSamplingDistance,
 )
-from mesa_ret.weapons.weapon import BasicWeapon
+from ret.weapons.weapon import BasicWeapon
 
 from . import iads_constants as iads_constants
 from .iads_agent_creator import IADSAgentCreator

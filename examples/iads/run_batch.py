@@ -3,18 +3,22 @@
 Iterates over one iteration.
 """
 
-from mesa_ret.batchrunner import FixedReportingBatchRunner
-
+from ret.batchrunner import FixedReportingBatchRunner
 from iads.model import IADS
+
 
 params = None
 
+outputs = "./output/IADS"
+
 br = FixedReportingBatchRunner(
     model_cls=IADS,
+    output_path=outputs,
     parameters_list=params,
-    iterations=1,
+    iterations=5,
     max_steps=400,
     collect_datacollector=True,
+    ignore_multiprocessing=True,
 )
 
 if __name__ == "__main__":
@@ -30,5 +34,7 @@ if __name__ == "__main__":
             "observation_record",
             "perception_record",
             "behaviour_selection",
-        ]
+            "position_and_culture",
+        ],
     )
+    br.find_and_copy_map()

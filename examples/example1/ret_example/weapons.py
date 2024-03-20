@@ -4,15 +4,15 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from mesa import Agent
-from mesa_ret.weapons.weapon import BasicWeapon
+from ret.weapons.weapon import BasicWeapon
 
 if TYPE_CHECKING:
     from datetime import timedelta
     from typing import Optional
 
     from mesa.space import GridContent
-    from mesa_ret.agents.agent import RetAgent
-    from mesa_ret.agents.agenttype import AgentType
+    from ret.agents.agent import RetAgent
+    from ret.agents.agenttype import AgentType
 
 
 class TargetTypeSpecificPKillWeapon(BasicWeapon):

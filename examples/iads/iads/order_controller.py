@@ -4,23 +4,23 @@ from __future__ import annotations
 from datetime import datetime, timedelta
 from typing import TYPE_CHECKING
 
-from mesa_ret.agents.affiliation import Affiliation
-from mesa_ret.agents.agentfilter import AgentFilter, FilterNot
-from mesa_ret.agents.groupagent import GroupAgent
-from mesa_ret.behaviours.move import AircraftMoveBehaviour
-from mesa_ret.behaviours.sense import SenseBehaviour
-from mesa_ret.creator.addorders import add_orders_to_agents
-from mesa_ret.formations import SquareFormationRounded
-from mesa_ret.orders.order import CompoundTask, GroupAgentOrder, Order
-from mesa_ret.orders.tasks.communicate import CommunicateOrderTask, CommunicateWorldviewTask
-from mesa_ret.orders.tasks.deploycountermeasure import DeployCountermeasureTask
-from mesa_ret.orders.tasks.fire import FireAtTargetTask
-from mesa_ret.orders.tasks.move import GroupFormationMoveTask, MoveInBandTask
-from mesa_ret.orders.tasks.sense import SenseTask
-from mesa_ret.orders.triggers.immediate import ImmediateTrigger
-from mesa_ret.orders.triggers.killed import KilledAgentsAtPositionTrigger
-from mesa_ret.orders.triggers.position import PositionTrigger
-from mesa_ret.orders.triggers.time import TimeTrigger
+from ret.agents.affiliation import Affiliation
+from ret.agents.agentfilter import AgentFilter, FilterNot
+from ret.agents.groupagent import GroupAgent
+from ret.behaviours.move import AircraftMoveBehaviour
+from ret.behaviours.sense import SenseBehaviour
+from ret.creator.addorders import add_orders_to_agents
+from ret.formations import SquareFormationRounded
+from ret.orders.order import CompoundTask, GroupAgentOrder, Order
+from ret.orders.tasks.communicate import CommunicateOrderTask, CommunicateWorldviewTask
+from ret.orders.tasks.deploycountermeasure import DeployCountermeasureTask
+from ret.orders.tasks.fire import FireAtTargetTask
+from ret.orders.tasks.move import GroupFormationMoveTask, MoveInBandTask
+from ret.orders.tasks.sense import SenseTask
+from ret.orders.triggers.immediate import ImmediateTrigger
+from ret.orders.triggers.killed import KilledAgentsAtPositionTrigger
+from ret.orders.triggers.position import PositionTrigger
+from ret.orders.triggers.time import TimeTrigger
 
 from . import iads_constants as iads_constants
 from .iads_triggers import FriendlyIdentifiedAgentsTrigger, HostileIdentifiedAgentsTrigger
@@ -28,9 +28,9 @@ from .iads_triggers import FriendlyIdentifiedAgentsTrigger, HostileIdentifiedAge
 if TYPE_CHECKING:
     from typing import Optional
 
-    from mesa_ret.agents.agent import RetAgent
-    from mesa_ret.model import RetModel
-    from mesa_ret.types import Coordinate
+    from ret.agents.agent import RetAgent
+    from ret.model import RetModel
+    from ret.types import Coordinate
 
 
 class MoveAndCommunicateBehaviour(AircraftMoveBehaviour):
@@ -109,7 +109,7 @@ class IADSOrderController:
                         position=(360000, 170000),
                         tolerance=iads_constants.pos_tolerance,
                     ),
-                    task=SenseTask(duration=timedelta(days=1)),
+                    task=SenseTask(duration=timedelta(days=1), direction=90),
                     priority=2,
                     persistent=True,
                 ),
@@ -317,7 +317,7 @@ class IADSOrderController:
 
         hostile_sensor_orders = [
             Order(
-                task=SenseTask(duration=timedelta(days=1)),
+                task=SenseTask(duration=timedelta(days=1), direction=90),
                 trigger=ImmediateTrigger(),
                 priority=1,
                 persistent=True,

@@ -2,10 +2,10 @@
 import os
 from math import inf
 
-from mesa_ret.sensing.perceivedworld import Confidence
-from mesa_ret.space.culture import Culture
-from mesa_ret.space.feature import BoxFeature, LineFeature, SphereFeature
-from mesa_ret.space.heightband import AbsoluteHeightBand
+from ret.sensing.perceivedworld import Confidence
+from ret.space.culture import Culture
+from ret.space.feature import BoxFeature, LineFeature, SphereFeature
+from ret.space.heightband import AbsoluteHeightBand
 
 IMAGE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "./images"))
 

@@ -1,23 +1,26 @@
-"""Friendly Agent creator for Example model."""
+"""Friendly Agent creator for Example model.
+
+Unit icons created using: <https://spatialillusions.com/>
+"""
 from __future__ import annotations
 
 import os
 from datetime import timedelta
 from typing import TYPE_CHECKING
 
-from mesa_ret.agents.agent import Affiliation, RetAgent
-from mesa_ret.agents.agenttype import AgentType
-from mesa_ret.behaviours.communicate import (
+from ret.agents.agent import Affiliation, RetAgent
+from ret.agents.agenttype import AgentType
+from ret.behaviours.communicate import (
     CommunicateOrdersBehaviour,
     CommunicateWorldviewBehaviour,
 )
-from mesa_ret.behaviours.fire import FireBehaviour
-from mesa_ret.behaviours.hide import HideBehaviour
-from mesa_ret.behaviours.move import AircraftMoveBehaviour, GroundBasedMoveBehaviour
-from mesa_ret.behaviours.sense import SenseBehaviour
-from mesa_ret.behaviours.wait import WaitBehaviour
-from mesa_ret.creator.agents import create_agents
-from mesa_ret.sensing.sensor import (
+from ret.behaviours.fire import FireBehaviour
+from ret.behaviours.hide import HideBehaviour
+from ret.behaviours.move import AircraftMoveBehaviour, GroundBasedMoveBehaviour
+from ret.behaviours.sense import SenseBehaviour
+from ret.behaviours.wait import WaitBehaviour
+from ret.creator.agents import create_agents
+from ret.sensing.sensor import (
     ContrastAcquire1dSensor,
     EOContrastSensorType,
     SensorWavelength,
@@ -27,7 +30,7 @@ from mesa_ret.sensing.sensor import (
 from . import constants, targetting, weapons
 
 if TYPE_CHECKING:
-    from mesa_ret.model import RetModel
+    from ret.model import RetModel
 
 
 class FriendlyAgentCreator:

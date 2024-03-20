@@ -1,15 +1,15 @@
 """Example RET Model."""
+
 from __future__ import annotations
 
 import os
 from typing import TYPE_CHECKING
 
 from mesa.time import RandomActivation
-from mesa_ret.model import RetModel
-from mesa_ret.scenario_independent_data import ModelMetadata
-from mesa_ret.space.feature import CompoundAreaFeature
-from mesa_ret.space.space import ContinuousSpaceWithTerrainAndCulture3d
-from mesa_ret.visualisation.json_writer import JsonWriter
+from ret.model import RetModel
+from ret.scenario_independent_data import ModelMetadata
+from ret.space.feature import CompoundAreaFeature
+from ret.space.space import ContinuousSpaceWithTerrainAndCulture3d
 
 from . import constants
 from .friendly_agent_creator import FriendlyAgentCreator
@@ -32,13 +32,14 @@ class ExampleModel(RetModel):
     react.
     """
 
-    def __init__(self, start_time: datetime, time_step: timedelta, end_time: datetime):
+    def __init__(self, start_time: datetime, time_step: timedelta, end_time: datetime, **kwargs):
         """Initialise an Example model.
 
         Args:
             start_time (datetime): Simulation start time.
             time_step (timedelta): Simulation time step.
             end_time (datetime): Simulation end time.
+            output_folder (Optional[str]): Folder where to write outputs
         """
         super().__init__(
             start_time=start_time,
@@ -46,8 +47,7 @@ class ExampleModel(RetModel):
             end_time=end_time,
             space=self.setup_space(),
             schedule=RandomActivation(self),
-            log_config="all",
-            playback_writer=JsonWriter(),
+            **kwargs,
         )
 
         friendly_agent_creator = FriendlyAgentCreator(self)

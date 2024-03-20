@@ -1,7 +1,8 @@
 """Batch run Example model."""
+
 from datetime import datetime, timedelta
 
-from mesa_ret.batchrunner import FixedReportingBatchRunner
+from ret.batchrunner import FixedReportingBatchRunner
 
 from ret_example.model import ExampleModel
 
@@ -18,6 +19,8 @@ br = FixedReportingBatchRunner(
     iterations=5,
     max_steps=121,
     collect_datacollector=True,
+    output_path="./output/Example_1",
+    ignore_multiprocessing=True,
 )
 
 br.run_all()

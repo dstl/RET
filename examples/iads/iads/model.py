@@ -1,13 +1,13 @@
 """IADS model."""
+
 from __future__ import annotations
 
 import os
 from datetime import datetime, timedelta
 
 from mesa.time import RandomActivation
-from mesa_ret.model import RetModel
-from mesa_ret.space.space import ContinuousSpaceWithTerrainAndCulture3d
-from mesa_ret.visualisation.json_writer import JsonWriter
+from ret.model import RetModel
+from ret.space.space import ContinuousSpaceWithTerrainAndCulture3d
 
 from . import iads_constants as iads_constants
 from .friendly_agent_creator import FriendlyAgentCreator
@@ -22,7 +22,7 @@ class IADS(RetModel):
     intervals.
     """
 
-    def __init__(self):
+    def __init__(self, **kwargs):
         """Initialise the IADS model."""
         agent_reporters = {
             "pos": lambda a: a.pos,
@@ -37,8 +37,7 @@ class IADS(RetModel):
             schedule=RandomActivation(self),
             agent_reporters=agent_reporters,
             tables=tables,
-            log_all=True,
-            playback_writer=JsonWriter(),
+            **kwargs,
         )
 
         friendly_agent_creator = FriendlyAgentCreator(self)

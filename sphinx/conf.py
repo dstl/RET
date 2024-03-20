@@ -2,17 +2,17 @@
 """Sphinx configuration file."""
 
 
-import mesa_ret
+import ret
 
 extensions = ["sphinx.ext.autodoc", "sphinx.ext.napoleon"]
 
 source_suffix = [".rst", ".md"]
 master_doc = "index"
-exclude_patterns = ["mesa_ret/testsret/*", "mesa_ret/testing/*"]
+exclude_patterns = ["ret/testsret/*", "ret/testing/*"]
 
-project = u"RET"
+project = "RET"
 
-version = mesa_ret.__version__
+version = ret.__version__
 
 # -- Options for HTML output ---------------------------------------------------
 
