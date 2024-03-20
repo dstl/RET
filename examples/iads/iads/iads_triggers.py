@@ -3,8 +3,8 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from mesa_ret.orders.order import Trigger
-from mesa_ret.sensing.perceivedworld import (
+from ret.orders.order import Trigger
+from ret.sensing.perceivedworld import (
     AgentsAt,
     And,
     FriendlyAgents,
@@ -14,7 +14,7 @@ from mesa_ret.sensing.perceivedworld import (
 )
 
 if TYPE_CHECKING:
-    from mesa_ret.agents.agent import RetAgent
+    from ret.agents.agent import RetAgent
 
 
 class IdentifiedHostileAgentsAtPositionTrigger(Trigger):

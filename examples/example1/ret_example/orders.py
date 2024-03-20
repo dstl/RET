@@ -4,24 +4,24 @@ from __future__ import annotations
 from datetime import timedelta
 from typing import TYPE_CHECKING
 
-from mesa_ret.creator.addorders import add_background_orders_to_agents, add_orders_to_agents
-from mesa_ret.creator.triggers import TriggerType, create_triggers
-from mesa_ret.orders.background_order import BackgroundOrder
-from mesa_ret.orders.order import CompoundOrTrigger, CompoundTask, Order, Trigger
-from mesa_ret.orders.tasks.act_and_move import ActAndMoveTask
-from mesa_ret.orders.tasks.fire import (
+from ret.creator.addorders import add_background_orders_to_agents, add_orders_to_agents
+from ret.creator.triggers import TriggerType, create_triggers
+from ret.orders.background_order import BackgroundOrder
+from ret.orders.order import CompoundOrTrigger, CompoundTask, Order, Trigger
+from ret.orders.tasks.act_and_move import ActAndMoveTask
+from ret.orders.tasks.fire import (
     DetermineTargetAndFireTask,
     FireAtAreaTask,
     FireAtTargetTask,
     NamedWeaponSelector,
 )
-from mesa_ret.orders.tasks.move import FixedRandomMoveTask, MoveInBandTask, MoveTask
-from mesa_ret.orders.tasks.sense import SenseTask
-from mesa_ret.orders.triggers.immediate import ImmediateTrigger
-from mesa_ret.orders.triggers.killed import AgentKilledTrigger
-from mesa_ret.orders.triggers.weapon import AgentFiredWeaponTrigger
-from mesa_ret.sensing.agentcasualtystate import AgentCasualtyState
-from mesa_ret.sensing.perceivedworld import (
+from ret.orders.tasks.move import FixedRandomMoveTask, MoveInBandTask, MoveTask
+from ret.orders.tasks.sense import SenseTask
+from ret.orders.triggers.immediate import ImmediateTrigger
+from ret.orders.triggers.killed import AgentKilledTrigger
+from ret.orders.triggers.weapon import AgentFiredWeaponTrigger
+from ret.sensing.agentcasualtystate import AgentCasualtyState
+from ret.sensing.perceivedworld import (
     And,
     FriendlyAgents,
     HostileAgents,
@@ -32,8 +32,8 @@ from mesa_ret.sensing.perceivedworld import (
 from . import constants
 
 if TYPE_CHECKING:
-    from mesa_ret.agents.agent import RetAgent
-    from mesa_ret.model import RetModel
+    from ret.agents.agent import RetAgent
+    from ret.model import RetModel
 
 
 class FriendlyRecognisedAgentsTrigger(Trigger):

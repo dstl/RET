@@ -1,1 +1,0 @@
-"""RET Generation application."""

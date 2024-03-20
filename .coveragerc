@@ -4,9 +4,12 @@ concurrency = multiprocessing
 
 [report]
 omit =
-    mesa_ret/testsret/*
-    ret_tap/tests/*
-    mesa/*
+    testsret/*
+	ret/testing/*
+	*/__init__.py
+	mesa_local/*
+	sphinx/*
+	retplay/*
 
 exclude_lines =
     pragma: no cover

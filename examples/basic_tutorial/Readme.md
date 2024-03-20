@@ -3,7 +3,7 @@
 ## Release Notes
 
 This basic tutorial on the use of the Rapid Exploratory modelling Toolset (RET) was written in Python 3.8 and using
-`mesa_ret` v1.0
+`ret` v1.0
 
 ## Structure
 
@@ -12,6 +12,8 @@ to provide new users of RET with a basic understanding of the core components of
 order in which to approach a basic combat modelling task.  As this is a basic tutorial we will not be creating new agent
 types or significantly modifying behaviours (examples of this can be found in the advanced tutorial).  Details of the
 scenario are not strictly necessary for this tutorial but can be found in a separate notebook.
+
+Unit icons created using: <https://spatialillusions.com/>
 
 1. Agents
     1. Behaviours
